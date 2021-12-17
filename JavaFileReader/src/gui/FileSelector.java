@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 import javax.swing.JFileChooser;
 
-import controller.ReadJavaFile;
+import controller.JavaFileInterpreter;
 
 public class FileSelector {
 
@@ -46,7 +46,7 @@ public class FileSelector {
 		if (result == JFileChooser.APPROVE_OPTION) {
 			File selectedFile = fileChooser.getSelectedFile();
 			
-			ReadJavaFile reader = convertFiles(selectedFile);
+			JavaFileInterpreter reader = convertFiles(selectedFile);
 			
 			String clipboardString = "";
 			
@@ -74,11 +74,11 @@ public class FileSelector {
 		}
 	}
 	
-	private ReadJavaFile convertFiles(File file) {
+	private JavaFileInterpreter convertFiles(File file) {
 		
 		if (file.isDirectory()) {
 
-			ReadJavaFile reader = null;
+			JavaFileInterpreter reader = null;
 			
 			File[] files = file.listFiles();
 			if (files != null) {
@@ -90,7 +90,7 @@ public class FileSelector {
 			
 			return reader;
 		} else {
-			ReadJavaFile reader = new ReadJavaFile();
+			JavaFileInterpreter reader = new JavaFileInterpreter();
 			reader.extractJavaFile(file);
 		
 			

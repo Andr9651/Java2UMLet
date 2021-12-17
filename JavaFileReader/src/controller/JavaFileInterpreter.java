@@ -14,20 +14,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.FileWriter;
 
-public class ReadJavaFile {
+public class JavaFileInterpreter {
 
 	//private static String path = "C:\\Users\\Bruger\\git\\P2BevarUkraine\\P2.BevarUkraine\\src\\model\\ModelSupplier.java";
 	//private static String path1 = "C:\\Users\\Bruger\\git\\P2BevarUkraine\\P2.BevarUkraine\\src\\dataaccess\\DAO.java";
 	//private static String path2 = "C:\\Users\\Bruger\\git\\P2BevarUkraine\\P2.BevarUkraine\\src\\dataaccess\\DAOFactorySupplier.java";
-	private static String path3 = "C:\\Users\\Bruger\\git\\P2BevarUkraine\\P2.BevarUkraine\\src\\control\\standard\\BetterPickupRouteController.java";
+	//private static String path3 = "C:\\Users\\Bruger\\git\\P2BevarUkraine\\P2.BevarUkraine\\src\\control\\standard\\BetterPickupRouteController.java";
 	//private static String path4 = "C:\\Users\\Bruger\\git\\P2BevarUkraine\\P2.BevarUkraine\\src\\gui\\windows\\AddressSelectorWindow.java";
 	private boolean firstMethod;
 	private List<String> resultList;
 	private File file;
-
+	
+/*
 	public static void main(String[] args) {
 		
-		ReadJavaFile reader = new ReadJavaFile();
+		JavaFileInterpreter reader = new JavaFileInterpreter();
 		//reader.readJavaFile(path3);
 		reader.extractJavaFile(path3);
 		
@@ -37,8 +38,10 @@ public class ReadJavaFile {
 		reader.saveResultFile(System.getProperty("user.home") + "\\Java2UMLet\\");
 
 	}
+	*/
+	
 
-	public ReadJavaFile() {
+	public JavaFileInterpreter() {
 		resultList = new ArrayList<>();
 	}
 	
